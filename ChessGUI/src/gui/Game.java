@@ -30,16 +30,16 @@ public class Game implements GameObserver {
 	public static final int FRAME_WIDTH = Cell.CELL_SIZE * 11;
 	public static final int FRAME_HEIGHT = Cell.CELL_SIZE * 8;
 
-	private MenuPanel menuPanel;
-	private JPanel gamePanel;
-	private JPanel container;
-	private CardLayout cardLayout;
+	private final MenuPanel menuPanel;
+	private final JPanel gamePanel;
+	private final JPanel container;
+	private final CardLayout cardLayout;
 
-	private BoardPanel boardPanel;
-	private ControlPanel controlPanel;
-	private MoveLogPanel moveLogPanel;
-	private JPanel sidePanel;
-	private JFrame frame;
+	private final BoardPanel boardPanel;
+	private final ControlPanel controlPanel;
+	private final MoveLogPanel moveLogPanel;
+	private final JPanel sidePanel;
+	private final JFrame frame;
 	private Chess chess;
 
 	private boolean undoMade;
@@ -175,8 +175,7 @@ public class Game implements GameObserver {
 	/**
 	 * Updates the board panel
 	 */
-	@Override
-	public void updateBoard(Board board) {
+	private void updateBoard(Board board) {
 		for (int i = 0; i < Board.SIZE; i++)
 			for (int j = 0; j < Board.SIZE; j++) {
 				Position p = new Position(i, j);

@@ -13,9 +13,10 @@ public class Cell {
 	public static final int CELL_SIZE = 64;
 	public static final int HIGHLIGHT_SIZE = 32;
 
-	private int x,y;
+	private final int x;
+    private final int y;
 	
-	private BufferedImage cellImage;
+	private final BufferedImage cellImage;
 	private BufferedImage pieceImage;
 	private boolean isHighlighted;
 

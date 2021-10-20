@@ -8,7 +8,7 @@ import engine.piece.Alliance;
  */
 public class Player {
 
-	private Alliance alliance;
+	private final Alliance alliance;
 
 	public Player(Alliance alliance) {
 		this.alliance = alliance;

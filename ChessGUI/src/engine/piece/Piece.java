@@ -13,7 +13,7 @@ import engine.move.Move;
 public abstract class Piece {
 
 	protected Position position;
-	protected Alliance alliance;
+	protected final Alliance alliance;
 	protected boolean hasMoved;
 
 	/**
@@ -72,10 +72,6 @@ public abstract class Piece {
 
 	public Alliance getAlliance() {
 		return alliance;
-	}
-
-	public void setAlliance(Alliance alliance) {
-		this.alliance = alliance;
 	}
 
 }

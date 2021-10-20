@@ -3,7 +3,6 @@ package engine;
 import java.util.ArrayList;
 import java.util.Stack;
 
-import engine.board.Board;
 import engine.move.Move;
 
 /**
@@ -12,11 +11,11 @@ import engine.move.Move;
  */
 public interface GameObserver {
 
-	public void moveMade(Move move);
-	public void updateBoard(Board board);
-	public void notifyMoveStackUpdated(Stack<Move> moveStack);
-	public void highlightPossibleMoves(ArrayList<Move> moves);
-	public void clearHighlights();
-	public void notifyGameEnded(int statusCode);
-	public String promptPromotionType();
+	void moveMade(Move move);
+
+    void notifyMoveStackUpdated(Stack<Move> moveStack);
+	void highlightPossibleMoves(ArrayList<Move> moves);
+	void clearHighlights();
+	void notifyGameEnded(int statusCode);
+	String promptPromotionType();
 }

@@ -25,18 +25,18 @@ import gui.sfx.AudioFile;
 public class BoardPanel extends JPanel implements ActionListener {
 	private static final long serialVersionUID = 1L;
 
-	private Cell cells[][];
+	private final Cell[][] cells;
 	private BoardAnimationListener animListener;
 	
-	private Timer timer;
+	private final Timer timer;
 	private boolean isAnimating;
-	private float animTime = 1f;
+	private final float animTime = 1f;
 	private float animTimer;
 	private Vector2f pos, src, des;
 	private BufferedImage movingPieceImage;
 	private Position pieceDestination;
 	
-	private AudioFile moveSound;
+	private final AudioFile moveSound;
 
 	/**
 	 * Constructor

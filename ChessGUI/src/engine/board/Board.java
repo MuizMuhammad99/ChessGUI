@@ -22,7 +22,7 @@ public class Board {
 	public static final int WHITE_HOME_ROW = SIZE - 1;
 	public static final int BLACK_HOME_ROW = 0;
 
-	private Tile[][] tiles;
+	private final Tile[][] tiles;
 	private King whiteKing, blackKing;
 
 	/**

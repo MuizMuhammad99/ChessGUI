@@ -6,7 +6,6 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.DataLine;
-import javax.sound.sampled.FloatControl;
 import javax.sound.sampled.LineUnavailableException;
 
 /**
@@ -15,9 +14,9 @@ import javax.sound.sampled.LineUnavailableException;
  */
 public class AudioFile {
 
-	private AudioInputStream stream;
+	private final AudioInputStream stream;
 	private Clip clip;
-	private DataLine.Info info;
+	private final DataLine.Info info;
 	
 	/**
 	 * Constructor
@@ -37,15 +36,7 @@ public class AudioFile {
 		}
 		
 	}
-	
-	/**
-	 * 
-	 * @return	true if audio is played
-	 */
-	public boolean isPlayed() {
-		return clip.getMicrosecondPosition() == clip.getMicrosecondLength();
-	}
-	
+
 	/**
 	 * plays the audio
 	 */
@@ -53,33 +44,7 @@ public class AudioFile {
 		clip.setFramePosition(0);
 		clip.start();
 	}
-	
-	/**
-	 * loops the audio
-	 */
-	public void loop() {
-		clip.setFramePosition(0);
-		clip.loop(Clip.LOOP_CONTINUOUSLY);
-	}
-	
-	/**
-	 * stops the audio
-	 */
-	public void stop() {
-		clip.stop();
-		clip.flush();
-	}
-	
-	/**
-	 * Sets the volume in decibels
-	 * @param value value
-	 */
-	public void setVolume(float value) {
-	        FloatControl volume = (FloatControl) clip.getControl(FloatControl.Type.MASTER_GAIN);
-	        volume.setValue(value);
-	    
-	}
-	
+
 	/**
 	 * resets the audio
 	 */

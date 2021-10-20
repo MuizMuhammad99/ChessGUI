@@ -28,14 +28,16 @@ public class Chess {
 	public static final int WHITE_STALEMATE = 3;
 	public static final int BLACK_STALEMATE = 4;
 
-	private GameObserver observer;
-	private Player whitePlayer, blackPlayer;
+	private final GameObserver observer;
+	private final Player whitePlayer;
+	private final Player blackPlayer;
 	private Player currentPlayer;
-	private Board board;
+	private final Board board;
 	private Piece selectedPiece;
 	private ArrayList<Move> possibleMoves;// selected piece's possible moves
-	private Stack<Move> moveStack, redoStack;
-	private MinMax minmax = new MinMax();
+	private final Stack<Move> moveStack;
+	private final Stack<Move> redoStack;
+	private final MinMax minmax = new MinMax();
 
 	/**
 	 * Constructor
@@ -264,10 +266,6 @@ public class Chess {
 
 	public Stack<Move> getMoveStack() {
 		return moveStack;
-	}
-
-	public boolean isAITurn() {
-		return currentPlayer.getAlliance() == Alliance.BLACK;
 	}
 
 	public MinMax getMinmax() {

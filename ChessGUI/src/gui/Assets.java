@@ -16,8 +16,8 @@ import gui.sfx.AudioFile;
  */
 public class Assets {
 
-	private static HashMap<String, BufferedImage> assets = new HashMap<String, BufferedImage>();
-	private static HashMap<String, AudioFile> sounds = new HashMap<String, AudioFile>();
+	private static final HashMap<String, BufferedImage> assets = new HashMap<String, BufferedImage>();
+	private static final HashMap<String, AudioFile> sounds = new HashMap<String, AudioFile>();
 	
 	/**
 	 * Load the assets

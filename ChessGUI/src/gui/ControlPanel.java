@@ -18,10 +18,11 @@ import javax.swing.border.LineBorder;
 public class ControlPanel extends JPanel implements MouseListener {
 	private static final long serialVersionUID = 1L;
 
-	public static final int WIDTH = Cell.CELL_SIZE * 3;
-	public static final int HEIGHT = Cell.CELL_SIZE * 2;
-
-	private JLabel undoButton, redoButton, hintButton, saveButton, exitButton;
+	private final JLabel undoButton;
+    private final JLabel redoButton;
+    private final JLabel hintButton;
+    private final JLabel saveButton;
+    private final JLabel exitButton;
 	private ActionListener actionListener;
 
 	/**

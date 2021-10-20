@@ -6,5 +6,5 @@ package gui;
  */
 public interface BoardAnimationListener {
 
-	public void animationDone();
+	void animationDone();
 }

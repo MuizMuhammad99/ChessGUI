@@ -24,9 +24,9 @@ public class MoveLogPanel extends JPanel {
 	public static final int WIDTH = Cell.CELL_SIZE * 3;
 	public static final int HEIGHT = Cell.CELL_SIZE * 6;
 
-	private JLabel moveLogLabel;
-	private JScrollPane scrollPane;
-	private JList<String> moveList;
+	private final JLabel moveLogLabel;
+	private final JScrollPane scrollPane;
+	private final JList<String> moveList;
 
 	public MoveLogPanel() {
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));

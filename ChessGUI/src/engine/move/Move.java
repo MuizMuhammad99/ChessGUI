@@ -10,8 +10,8 @@ import engine.piece.Piece;
  */
 public class Move {
 
-	private Position source;
-	private Position destination;
+	private final Position source;
+	private final Position destination;
 	private Piece movingPiece;
 	private boolean hasMoved;
 
@@ -44,16 +44,8 @@ public class Move {
 		return source;
 	}
 
-	public void setSource(Position source) {
-		this.source = source;
-	}
-
 	public Position getDestination() {
 		return destination;
-	}
-
-	public void setDestination(Position destination) {
-		this.destination = destination;
 	}
 
 	public Piece getMovingPiece() {

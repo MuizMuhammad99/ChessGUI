@@ -21,8 +21,10 @@ import java.awt.event.MouseListener;
 public class MenuPanel extends JPanel implements MouseListener{
 	private static final long serialVersionUID = 1L;
 
-	private JLabel titleLabel;
-	private JLabel newGameButton,loadGameButton,exitButton;
+	private final JLabel titleLabel;
+	private final JLabel newGameButton;
+    private final JLabel loadGameButton;
+    private final JLabel exitButton;
 
 	private ActionListener actionListener;
 	

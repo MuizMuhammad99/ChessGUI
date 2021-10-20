@@ -11,7 +11,7 @@ import engine.piece.Rook;
  */
 public class CastlingMove extends Move{
 
-	private Move rookMove;
+	private final Move rookMove;
 	
 	public CastlingMove(Position kingSource, Position kingDestination,
 			Position rookSource, Position rookDestination, King king,Rook rook) {

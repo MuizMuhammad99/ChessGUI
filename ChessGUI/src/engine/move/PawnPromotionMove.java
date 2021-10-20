@@ -11,7 +11,7 @@ import engine.piece.Queen;
 public class PawnPromotionMove extends Move{
 
 	private Piece pieceToPromoteTo;
-	private Move move;
+	private final Move move;
 	
 	public PawnPromotionMove(Move move) {
 		super(move.getSource(),move.getDestination(),move.getMovingPiece());
