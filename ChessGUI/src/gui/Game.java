@@ -30,15 +30,11 @@ public class Game implements GameObserver {
 	public static final int FRAME_WIDTH = Cell.CELL_SIZE * 11;
 	public static final int FRAME_HEIGHT = Cell.CELL_SIZE * 8;
 
-	private final MenuPanel menuPanel;
-	private final JPanel gamePanel;
 	private final JPanel container;
 	private final CardLayout cardLayout;
 
 	private final BoardPanel boardPanel;
-	private final ControlPanel controlPanel;
 	private final MoveLogPanel moveLogPanel;
-	private final JPanel sidePanel;
 	private final JFrame frame;
 	private Chess chess;
 
@@ -83,7 +79,7 @@ public class Game implements GameObserver {
 		});
 
 		// control panel
-		controlPanel = new ControlPanel();
+		ControlPanel controlPanel = new ControlPanel();
 		controlPanel.setActionListener(new ActionListener() {
 
 			@Override
@@ -120,7 +116,7 @@ public class Game implements GameObserver {
 		moveLogPanel = new MoveLogPanel();
 
 		// menu panel
-		menuPanel = new MenuPanel();
+		MenuPanel menuPanel = new MenuPanel();
 		menuPanel.setActionListener(new ActionListener() {
 
 			@Override
@@ -143,12 +139,12 @@ public class Game implements GameObserver {
 		});
 
 		// side panel container
-		sidePanel = new JPanel(new BorderLayout());
+		JPanel sidePanel = new JPanel(new BorderLayout());
 		sidePanel.add(moveLogPanel, BorderLayout.CENTER);
 		sidePanel.add(controlPanel, BorderLayout.SOUTH);
 
 		// game panel container
-		gamePanel = new JPanel();
+		JPanel gamePanel = new JPanel();
 		gamePanel.add(boardPanel, BorderLayout.CENTER);
 		gamePanel.add(sidePanel, BorderLayout.EAST);
 
@@ -330,7 +326,7 @@ public class Game implements GameObserver {
 	}
 
 	/**
-	 * Prompts the user for the piece to prmote the pawn to
+	 * Prompts the user for the piece to promote the pawn to
 	 */
 	@Override
 	public String promptPromotionType() {

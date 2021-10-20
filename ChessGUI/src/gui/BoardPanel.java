@@ -30,7 +30,6 @@ public class BoardPanel extends JPanel implements ActionListener {
 	
 	private final Timer timer;
 	private boolean isAnimating;
-	private final float animTime = 1f;
 	private float animTimer;
 	private Vector2f pos, src, des;
 	private BufferedImage movingPieceImage;
@@ -61,6 +60,7 @@ public class BoardPanel extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		animTimer += 0.16f;
 
+		float animTime = 1f;
 		pos.x = interpolate(src.x, des.x, animTimer / animTime);
 		pos.y = interpolate(src.y, des.y, animTimer / animTime);
 
@@ -189,7 +189,7 @@ public class BoardPanel extends JPanel implements ActionListener {
 	private void initCells() {
 		for (int i = 0; i < Board.SIZE; i++)
 			for (int j = 0; j < Board.SIZE; j++) {
-				String key = "";
+				String key;
 				if (i % 2 == 0)
 					key = j % 2 == 0 ? "light_brown_cell" : "dark_brown_cell";
 				else

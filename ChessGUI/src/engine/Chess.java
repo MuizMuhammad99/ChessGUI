@@ -121,7 +121,7 @@ public class Chess {
 					}
 
 					//set piece
-					((PawnPromotionMove) move).setMovingPiece(piece);
+					move.setMovingPiece(piece);
 
 					
 					//execute move
@@ -177,7 +177,6 @@ public class Chess {
 			observer.clearHighlights();
 			observer.moveMade(bestMove);
 			observer.notifyMoveStackUpdated(moveStack);
-			return;
 		}
 	}
 

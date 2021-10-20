@@ -23,7 +23,7 @@ public class Rook extends Piece {
 	public ArrayList<Move> getPossibleMoves(Board board) {
 		ArrayList<Move> moves = new ArrayList<Move>();
 
-		// rook moves in 4 direcions
+		// rook moves in 4 directions
 		Position directions[] = { new Position(0, -1), new Position(0, 1), new Position(-1, 0), new Position(1, 0) };
 
 		// for each direction

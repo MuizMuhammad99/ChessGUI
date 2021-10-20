@@ -49,8 +49,8 @@ public class King extends Piece {
 			Position[] directions = { new Position(0, 1), new Position(0, -1) };// left & right castling direction
 			for (Position direction : directions) {
 				boolean noPiecesBetween = true;
-				boolean isCastleAtCorner = false;
-				boolean isCastleMoved = false;
+				boolean isCastleAtCorner;
+				boolean isCastleMoved;
 
 				// check if any pieces between king and rook
 				current.add(direction);

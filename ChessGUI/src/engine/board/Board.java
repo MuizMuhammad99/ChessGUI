@@ -66,7 +66,7 @@ public class Board {
 	 * @return	true if king is placed in check
 	 */
 	public boolean isCheckMoveFor(Alliance alliance, Move move) {
-		boolean isCheckMove = false;
+		boolean isCheckMove;
 
 		move.execute(this);
 		isCheckMove = isKingInCheck(alliance);

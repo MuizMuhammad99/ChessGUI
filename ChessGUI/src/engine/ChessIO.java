@@ -49,10 +49,10 @@ public class ChessIO {
 			while (scan.hasNext()) {
 				String moveStr = scan.next();
 				Move move = null;
-				int srow = 0, scol = 0;
-				int drow = 0, dcol = 0;
-				Position src = null;
-				Position des = null;
+				int srow, scol;
+				int drow, dcol;
+				Position src;
+				Position des;
 
 				switch (moveStr) {
 				case "Move":

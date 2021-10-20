@@ -14,21 +14,18 @@ import javax.sound.sampled.LineUnavailableException;
  */
 public class AudioFile {
 
-	private final AudioInputStream stream;
 	private Clip clip;
-	private final DataLine.Info info;
-	
+
 	/**
 	 * Constructor
 	 * @param stream audio input stream
 	 */
 	public AudioFile(AudioInputStream stream) {
-		this.stream = stream;
-		this.info = new DataLine.Info(Clip.class, this.stream.getFormat());
+		DataLine.Info info = new DataLine.Info(Clip.class, stream.getFormat());
 		
 		try {
 			this.clip = (Clip) AudioSystem.getLine(info);
-			clip.open(this.stream);
+			clip.open(stream);
 		} catch (LineUnavailableException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

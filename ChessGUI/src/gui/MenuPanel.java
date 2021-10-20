@@ -21,7 +21,6 @@ import java.awt.event.MouseListener;
 public class MenuPanel extends JPanel implements MouseListener{
 	private static final long serialVersionUID = 1L;
 
-	private final JLabel titleLabel;
 	private final JLabel newGameButton;
     private final JLabel loadGameButton;
     private final JLabel exitButton;
@@ -31,8 +30,8 @@ public class MenuPanel extends JPanel implements MouseListener{
 	public MenuPanel() {
 		setPreferredSize(new Dimension(Game.FRAME_WIDTH,Game.FRAME_HEIGHT));
 		setBackground(new Color(81 / 256f, 42 / 256f, 42 / 256f, 1f));
-		
-		titleLabel = new JLabel("CHESS GAME 2D");
+
+		JLabel titleLabel = new JLabel("CHESS GAME 2D");
 		newGameButton = new JLabel("New Game");
 		loadGameButton = new JLabel("Load Game");
 		exitButton = new JLabel("Exit");

@@ -24,16 +24,14 @@ public class MoveLogPanel extends JPanel {
 	public static final int WIDTH = Cell.CELL_SIZE * 3;
 	public static final int HEIGHT = Cell.CELL_SIZE * 6;
 
-	private final JLabel moveLogLabel;
-	private final JScrollPane scrollPane;
 	private final JList<String> moveList;
 
 	public MoveLogPanel() {
 		setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		setBackground(new Color(81 / 256f, 42 / 256f, 42 / 256f, 1f));
 		setBorder(new LineBorder(Color.BLACK, 2));
-		
-		moveLogLabel = new JLabel("M o v e  L o g s");
+
+		JLabel moveLogLabel = new JLabel("M o v e  L o g s");
 		moveLogLabel.setAlignmentX(0.5f);
 		moveLogLabel.setFont(new Font("Monospaced",Font.BOLD,15));
 		moveLogLabel.setForeground(Color.BLACK);
@@ -45,9 +43,9 @@ public class MoveLogPanel extends JPanel {
 		moveList.setForeground(Color.WHITE);
 		DefaultListCellRenderer renderer = (DefaultListCellRenderer) moveList.getCellRenderer();
 		renderer.setHorizontalAlignment(SwingConstants.CENTER);
-		
-		
-		scrollPane = new JScrollPane(moveList);
+
+
+		JScrollPane scrollPane = new JScrollPane(moveList);
 		scrollPane.setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		scrollPane.setBorder(null);
 		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);

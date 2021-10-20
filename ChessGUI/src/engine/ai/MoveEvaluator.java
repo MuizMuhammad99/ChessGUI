@@ -18,7 +18,7 @@ import engine.piece.Rook;
 
 /**
  * A static Move Evaluator for the chess game. It evaluates by material,
- * mobiliy, check, checkmate and move type
+ * mobility, check, checkmate and move type
  *
  */
 public class MoveEvaluator {
@@ -31,7 +31,7 @@ public class MoveEvaluator {
 	 * 
 	 * @return the score
 	 */
-	public static final int score(Move move, Board board) {
+	public static int score(Move move, Board board) {
 		Alliance alliance = move.getMovingPiece().getAlliance();
 		Alliance opposing = alliance.getOpposing();
 
